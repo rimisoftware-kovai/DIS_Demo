@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<!-- saved from url=(0129)file:///C:/Users/BMRMf/Downloads/Dr.%20Dasarathan%20International%20School%20_%20Inspire%20%C2%B7%20Explore%20%C2%B7%20Excel.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dr. Dasarathan International School | Inspire · Explore · Excel</title>
+<meta name="description" content="Dr. Dasarathan International School, Coimbatore – nurturing well-educated, disciplined citizens through holistic education since 2010.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   DESIGN TOKENS  – Refined Editorial + Soft Coastal palette
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  /* Blues */
+  --b50:#f0f9ff; --b100:#e0f2fe; --b200:#bae6fd;
+  --b300:#7dd3fc; --b400:#38bdf8; --b500:#0ea5e9;
+  --b600:#0284c7; --b700:#0369a1; --b800:#075985; --b900:#0c4a6e;
+  /* Navy */
+  --navy:#05243a; --navy2:#0a3b5e;
+  /* Gold accent */
+  --gold:#f59e0b; --gold-lt:#fef9ee; --gold-dk:#d97706;
+  /* Neutrals */
+  --white:#fff; --g50:#f8fafc; --g100:#f1f5f9;
+  --g200:#e2e8f0; --g300:#cbd5e1; --g400:#94a3b8;
+  --g500:#64748b; --g700:#334155; --g900:#0f172a;
+  /* Type */
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  /* Effects */
+  --r:16px; --r-sm:10px; --r-lg:24px;
+  --sh:0 2px 16px rgba(5,36,58,.08);
+  --sh-md:0 8px 36px rgba(5,36,58,.13);
+  --sh-lg:0 20px 60px rgba(5,36,58,.18);
+  --ease:.3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ══════ Reset ══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--g50);color:var(--g700);overflow-x:hidden}
+img{max-width:100%;display:block;object-fit:cover}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;font-family:var(--sans)}
+input,textarea,select{font-family:var(--sans)}
+h1,h2,h3,h4{line-height:1.15}
+
+/* ══════ Page Router ════════════════════════════════════════════ */
+.pg{display:none}
+.pg.on{display:block;animation:rise .5s cubic-bezier(.22,1,.36,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* ══════ Topbar ═════════════════════════════════════════════════ */
+.topbar{
+  background:var(--navy);color:rgba(255,255,255,.72);
+  font-size:.75rem;font-weight:600;letter-spacing:.04em;
+  padding:.5rem 2rem;display:flex;justify-content:space-between;
+  align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.topbar a{color:var(--b300);transition:color var(--ease)}
+.topbar a:hover{color:var(--gold)}
+.tb-right{display:flex;gap:1.4rem;align-items:center}
+.tb-sep{opacity:.3}
+
+/* ══════ Header ═════════════════════════════════════════════════ */
+header{
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(20px);
+  box-shadow:0 1px 0 var(--g200),var(--sh);
+  position:sticky;top:0;z-index:900;
+}
+.hd{
+  max-width:1320px;margin:auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+/* Logo */
+.logo{display:flex;align-items:center;gap:.1rem;cursor:pointer;flex-shrink:0}
+.logo-mark{
+  width:54px;height:54px;border-radius:14px;flex-shrink:0;
+  background:linear-gradient(145deg,var(--b600),var(--navy));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 18px rgba(5,36,58,.3);position:relative;overflow:hidden;
+}
+.logo-mark::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.22) 0%,transparent 60%);
+}
+.logo-mark svg{width:30px;height:30px;fill:var(--white);position:relative;z-index:1}
+.logo-copy .ln1{font-family:var(--serif);font-size:1.13rem;color:var(--navy);line-height:1.1 ; font-weight:bold}
+.logo-copy .ln2{font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--b600);margin-top:1px}
+/* Nav */
+nav{display:flex;align-items:center;gap:.08rem}
+.nb{
+  background:none;padding:.42rem .7rem;border-radius:8px;
+  font-size:.8rem;font-weight:700;color:var(--g500);
+  transition:all var(--ease);white-space:nowrap;
+}
+.nb:hover,.nb.cur{background:var(--b50);color:var(--b700)}
+.nb.cta{
+  background:linear-gradient(135deg,var(--b500),var(--b700));
+  color:var(--white) !important;padding:.42rem 1rem;
+  box-shadow:0 3px 14px rgba(14,165,233,.38);margin-left:.4rem;
+}
+.nb.cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(14,165,233,.45)}
+/* Dropdown */
+.has-drop{position:relative}
+.has-drop .nb{padding-right:1.4rem}
+.has-drop .nb::after{content:'▾';position:absolute;right:.5rem;font-size:.65rem;opacity:.6}
+.drop{
+  position:absolute;top:calc(100% + .6rem);left:0;min-width:220px;
+  background:var(--white);border-radius:var(--r);box-shadow:var(--sh-md);
+  border:1px solid var(--g200);padding:.5rem;z-index:800;
+  opacity:0;pointer-events:none;transform:translateY(-8px);
+  transition:all .2s ease;
+}
+.has-drop:hover .drop{opacity:1;pointer-events:all;transform:none}
+.drop a{
+  display:block;padding:.55rem .9rem;border-radius:8px;
+  font-size:.83rem;font-weight:600;color:var(--g700);
+  transition:all var(--ease);
+}
+.drop a:hover{background:var(--b50);color:var(--b700)}
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;background:none;padding:.4rem}
+.ham span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:var(--ease)}
+.mob-nav{
+  display:none;position:fixed;inset:0;top:88px;z-index:850;
+  background:rgba(255,255,255,.98);backdrop-filter:blur(16px);
+  flex-direction:column;gap:.3rem;padding:1.5rem 1.5rem;overflow-y:auto;
+}
+.mob-nav.open{display:flex}
+.mob-nav .nb{text-align:left;font-size:.95rem;padding:.65rem .9rem}
+.mob-nav hr{border:none;border-top:1px solid var(--g200);margin:.5rem 0}
+
+/* ══════ Utility Buttons ════════════════════════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 1.9rem;border-radius:12px;
+  font-size:.92rem;font-weight:700;letter-spacing:.01em;
+  transition:all var(--ease);cursor:pointer;border:none;
+}
+.btn-prime{background:linear-gradient(135deg,var(--b400),var(--b700));color:var(--white);box-shadow:0 6px 26px rgba(14,165,233,.42)}
+.btn-prime:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(14,165,233,.52)}
+.btn-ghost{background:rgba(255,255,255,.18);color:var(--white);border:2px solid rgba(255,255,255,.4);backdrop-filter:blur(10px)}
+.btn-ghost:hover{background:rgba(255,255,255,.28);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:var(--white);box-shadow:0 4px 16px rgba(5,36,58,.3)}
+.btn-navy:hover{background:var(--navy2);transform:translateY(-2px)}
+.btn-light{background:var(--b50);color:var(--b700)}
+.btn-light:hover{background:var(--b100)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dk));color:var(--white);box-shadow:0 4px 16px rgba(245,158,11,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.45)}
+
+/* ══════ Page Banner ════════════════════════════════════════════ */
+.pban{
+  background:linear-gradient(140deg,var(--navy) 0%,var(--b800) 60%,var(--b600) 100%);
+  color:var(--white);padding:4.5rem 2rem 3.5rem;
+  text-align:center;position:relative;overflow:hidden;
+}
+.pban::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='.04'%3E%3Cpath d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.pban-inner{position:relative}
+.pban h1{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);margin-bottom:.6rem;font-style:italic}
+.pban p{font-size:1rem;color:rgba(255,255,255,.78);max-width:560px;margin:.5rem auto 0;line-height:1.65}
+.bc{display:flex;justify-content:center;gap:.5rem;margin-top:.8rem;font-size:.78rem;color:rgba(255,255,255,.5)}
+.bc span{color:rgba(255,255,255,.3)}
+
+/* ══════ Section Shell ══════════════════════════════════════════ */
+.sec{padding:5.5rem 2rem}
+.wrap{max-width:1320px;margin:auto}
+.tag{
+  display:inline-block;background:var(--b100);color:var(--b700);
+  font-size:.7rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  padding:.28rem .85rem;border-radius:100px;margin-bottom:.8rem;
+}
+.tag.gold{background:var(--gold-lt);color:var(--gold-dk)}
+.sh{font-family:var(--serif);font-size:clamp(1.85rem,3.2vw,2.9rem);color:var(--navy);line-height:1.12;margin-bottom:.9rem}
+.sh em{font-style:italic;color:var(--b600)}
+.lead{font-size:1.02rem;color:var(--g500);line-height:1.75;max-width:640px;margin-bottom:2.2rem}
+
+/* ══════ Cards ══════════════════════════════════════════════════ */
+.grid{display:grid;gap:1.4rem}
+.g2{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+.g3{grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.g5{grid-template-columns:repeat(auto-fill,minmax(165px,1fr))}
+.card{
+  background:var(--white);border-radius:var(--r);
+  box-shadow:var(--sh);border:1px solid var(--g200);
+  overflow:hidden;transition:all var(--ease);
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
+.card-img{width:100%;height:210px;object-fit:cover}
+.card-body{padding:1.4rem 1.5rem}
+.card-ico{
+  width:50px;height:50px;border-radius:12px;background:var(--b100);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;
+}
+.card-t{font-family:var(--serif);font-size:1.2rem;color:var(--navy);margin-bottom:.45rem}
+.card-d{font-size:.86rem;color:var(--g500);line-height:1.65}
+
+/* Split layout */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.split.rev{direction:rtl}.split.rev>*{direction:ltr}
+.split-img{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);position:relative}
+.split-img img{width:100%;height:440px}
+.split-img::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40%;
+  background:linear-gradient(to top,rgba(5,36,58,.35),transparent);pointer-events:none;
+}
+
+/* Accent (dark) block */
+.ab{
+  background:linear-gradient(145deg,var(--navy),var(--b800));
+  border-radius:var(--r-lg);padding:3rem 2.5rem;color:var(--white);
+  position:relative;overflow:hidden;
+}
+.ab::before{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06)}
+.ab::after{content:'';position:absolute;bottom:-100px;left:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.04)}
+.ab-inner{position:relative;z-index:1}
+.ab h3{font-family:var(--serif);font-size:1.8rem;color:var(--white);margin-bottom:.7rem}
+.ab p{color:rgba(255,255,255,.78);line-height:1.72}
+
+/* Check list */
+.ck{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.ck li{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--g500);line-height:1.5}
+.ck li::before{
+  content:'✓';flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:var(--b100);color:var(--b600);font-size:.73rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+
+/* Tabs */
+.tab-bar{display:flex;gap:.4rem;flex-wrap:wrap;border-bottom:2px solid var(--g200);margin-bottom:2rem;padding-bottom:0}
+.tb-btn{
+  padding:.55rem 1.15rem;background:none;font-size:.85rem;font-weight:700;
+  color:var(--g400);border-radius:8px 8px 0 0;border:2px solid transparent;
+  border-bottom:none;transition:all var(--ease);margin-bottom:-2px;
+}
+.tb-btn.on{background:var(--white);color:var(--b700);border-color:var(--g200);border-bottom:2px solid var(--white)}
+.tab-pane{display:none}
+.tab-pane.on{display:block;animation:rise .3s ease}
+
+/* ══════ Stat Bar ═══════════════════════════════════════════════ */
+.stat-bar{background:var(--white);border-bottom:1px solid var(--g200);box-shadow:var(--sh)}
+.stats{max-width:1320px;margin:auto;padding:2rem 2rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.stat{text-align:center;padding:.8rem;border-right:1px solid var(--g200)}
+.stat:last-child{border:none}
+.stat-n{font-family:var(--serif);font-size:2.5rem;color:var(--b700);line-height:1}
+.stat-l{font-size:.73rem;font-weight:700;color:var(--g400);letter-spacing:.08em;text-transform:uppercase;margin-top:.3rem}
+
+/* ══════ Forms ══════════════════════════════════════════════════ */
+.fg{margin-bottom:1.2rem}
+.fl{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;letter-spacing:.02em}
+.fc{
+  width:100%;padding:.75rem 1rem;border:2px solid var(--g200);
+  border-radius:var(--r-sm);font-size:.9rem;color:var(--g900);
+  background:var(--white);transition:border-color var(--ease);outline:none;
+}
+.fc:focus{border-color:var(--b500);box-shadow:0 0 0 3px rgba(14,165,233,.12)}
+textarea.fc{resize:vertical;min-height:110px}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--sh-lg);padding:2.5rem;border:1px solid var(--g200)}
+.form-card h3{font-family:var(--serif);font-size:1.5rem;color:var(--navy);margin-bottom:.3rem}
+.form-card .sub{font-size:.83rem;color:var(--g400);margin-bottom:1.4rem}
+
+/* ══════ Login ══════════════════════════════════════════════════ */
+.login-wrap{min-height:82vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem;background:linear-gradient(160deg,var(--b50) 0%,var(--white) 60%)}
+.lc{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--sh-lg);padding:2.8rem 2.5rem;max-width:440px;width:100%;border-top:5px solid var(--b500)}
+.lc-ico{width:72px;height:72px;border-radius:50%;background:var(--b100);display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 1.4rem}
+.lc h2{font-family:var(--serif);font-size:1.9rem;color:var(--navy);text-align:center;margin-bottom:.3rem}
+.lc .sub{font-size:.85rem;color:var(--g400);text-align:center;margin-bottom:1.6rem}
+.perms{background:var(--b50);border:1px solid var(--b200);border-radius:var(--r-sm);padding:.9rem 1.1rem;margin-bottom:1.5rem}
+.perms h4{font-size:.73rem;font-weight:800;color:var(--b700);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.ptag{display:inline-block;background:var(--b100);color:var(--b700);font-size:.7rem;font-weight:700;padding:.18rem .6rem;border-radius:100px;margin:.2rem .15rem 0 0}
+
+/* ══════ Achievement Card ════════════════════════════════════════ */
+.ach{
+  background:var(--white);border-radius:var(--r);box-shadow:var(--sh);
+  padding:1.3rem 1.4rem;border-left:4px solid var(--gold);transition:all var(--ease);
+}
+.ach:hover{transform:translateX(4px);box-shadow:var(--sh-md)}
+.ach-yr{font-size:.7rem;font-weight:800;color:var(--gold-dk);letter-spacing:.1em;text-transform:uppercase}
+.ach-t{font-family:var(--serif);font-size:1.05rem;color:var(--navy);margin:.25rem 0 .3rem}
+.ach-d{font-size:.83rem;color:var(--g500);line-height:1.6}
+
+/* ══════ Facility Card ══════════════════════════════════════════ */
+.fac{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all var(--ease);text-align:center;padding:1.8rem 1.3rem;border:1px solid var(--g200)}
+.fac:hover{transform:translateY(-5px);box-shadow:var(--sh-md);border-color:var(--b300)}
+.fac-ico{font-size:2.7rem;margin-bottom:.8rem}
+.fac h4{font-family:var(--serif);font-size:1rem;color:var(--navy);margin-bottom:.3rem}
+.fac p{font-size:.8rem;color:var(--g500);line-height:1.55}
+
+/* ══════ Event Card ═════════════════════════════════════════════ */
+.ev{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all var(--ease)}
+.ev:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
+.ev-img{width:100%;height:180px;object-fit:cover}
+.ev-body{padding:1.2rem 1.3rem}
+.ev-tag{display:inline-block;background:var(--b100);color:var(--b700);font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:.2rem .65rem;border-radius:100px;margin-bottom:.5rem}
+.ev-t{font-family:var(--serif);font-size:1.05rem;color:var(--navy)}
+
+/* ══════ Testimonial ════════════════════════════════════════════ */
+.testi{background:var(--white);border-radius:var(--r);padding:2rem;box-shadow:var(--sh);border:1px solid var(--g200);position:relative}
+.testi::before{content:'❝';font-size:4rem;color:var(--b100);position:absolute;top:.3rem;left:1rem;line-height:1;font-family:Georgia,serif}
+.testi-txt{font-size:.9rem;color:var(--g500);line-height:1.72;padding-top:1.6rem;margin-bottom:1.2rem}
+.testi-who{display:flex;align-items:center;gap:.8rem}
+.testi-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--b400),var(--b700));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--white);font-size:.88rem;flex-shrink:0}
+.testi-nm{font-size:.88rem;font-weight:700;color:var(--navy)}
+.testi-rl{font-size:.75rem;color:var(--g400)}
+
+/* ══════ Timeline ═══════════════════════════════════════════════ */
+.tl{position:relative;padding-left:2rem}
+.tl::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--b200)}
+.tl-item{position:relative;padding:0 0 2rem 1.5rem}
+.tl-item::before{content:'';position:absolute;left:-1.52rem;top:4px;width:14px;height:14px;border-radius:50%;background:var(--b500);border:3px solid var(--white);box-shadow:0 0 0 2px var(--b300)}
+.tl-yr{font-size:.72rem;font-weight:800;color:var(--b600);letter-spacing:.1em;text-transform:uppercase}
+.tl-t{font-family:var(--serif);font-size:1.05rem;color:var(--navy);margin:.2rem 0 .3rem}
+.tl-d{font-size:.84rem;color:var(--g500);line-height:1.6}
+
+/* ══════ Info Pill ══════════════════════════════════════════════ */
+.info-strip{
+  background:linear-gradient(135deg,var(--b100),var(--b50));
+  border:1px solid var(--b200);border-radius:var(--r);
+  padding:1.8rem 2rem;display:flex;align-items:center;gap:1.5rem;
+}
+.info-strip-ico{font-size:2rem;flex-shrink:0}
+
+/* ══════ Google Map ═════════════════════════════════════════════ */
+.map-frame{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--g200)}
+
+/* ══════ Toast ══════════════════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:2rem;right:2rem;z-index:9999;
+  background:var(--navy);color:var(--white);
+  padding:.9rem 1.4rem;border-radius:12px;font-size:.88rem;font-weight:600;
+  box-shadow:var(--sh-lg);transform:translateY(120px);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);max-width:320px;
+}
+.toast.show{transform:none}
+
+/* ══════ Footer ═════════════════════════════════════════════════ */
+footer{background:var(--navy);color:rgba(255,255,255,.68);padding:4rem 2rem 1.5rem}
+.ft-g{max-width:1320px;margin:auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-brand .sn{font-family:var(--serif);font-size:1.4rem;color:var(--white);margin-bottom:.6rem}
+.ft-brand p{font-size:.83rem;line-height:1.72;max-width:280px}
+.ft-col h4{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--b300);margin-bottom:.9rem}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.ft-col ul li a{font-size:.83rem;transition:color var(--ease)}
+.ft-col ul li a:hover{color:var(--b300)}
+.ft-bot{max-width:1320px;margin:auto;border-top:1px solid rgba(255,255,255,.1);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.75rem;color:rgba(255,255,255,.38)}
+.ft-bot a{color:rgba(255,255,255,.38);transition:color var(--ease)}
+.ft-bot a:hover{color:var(--b300)}
+.socials{display:flex;gap:.6rem;margin-top:1.1rem}
+.soc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;transition:all var(--ease)}
+.soc:hover{background:var(--b500);color:var(--white)}
+
+/* ══════ Hero ═══════════════════════════════════════════════════ */
+.hero{
+  min-height:94vh;position:relative;overflow:hidden;
+  display:flex;align-items:center;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(170deg,rgba(5,36,58,.82) 0%,rgba(3,105,161,.6) 55%,rgba(14,165,233,.32) 100%),
+    url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
+}
+.hero-bg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,var(--g50),transparent)}
+.hero-body{max-width:1320px;margin:auto;padding:6rem 2rem;position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.28);color:var(--white);
+  padding:.4rem 1rem;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.6rem;
+}
+.hero-badge .dot{width:7px;height:7px;background:var(--gold);border-radius:50%}
+.hero h1{
+  font-family:var(--serif);font-size:clamp(3rem,6.5vw,5.8rem);
+  color:var(--white);line-height:1.03;margin-bottom:1.4rem;
+  text-shadow:0 2px 30px rgba(0,0,0,.25);
+}
+.hero h1 em{font-style:italic;color:var(--b300)}
+.hero .hero-p{font-size:1.12rem;color:rgba(255,255,255,.84);max-width:580px;line-height:1.72;margin-bottom:2.4rem;font-weight:400}
+.hero-acts{display:flex;gap:1rem;flex-wrap:wrap}
+/* Hero floating card */
+.hero-float{
+  position:absolute;bottom:3.5rem;right:2rem;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
+  border-radius:var(--r);box-shadow:var(--sh-lg);padding:1.3rem 1.5rem;
+  display:flex;gap:1.5rem;align-items:center;
+  border:1px solid rgba(255,255,255,.6);
+  animation:float 4s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hf-num{font-family:var(--serif);font-size:1.9rem;color:var(--b700);line-height:1}
+.hf-label{font-size:.7rem;font-weight:700;color:var(--g500);letter-spacing:.06em;text-transform:uppercase;margin-top:.15rem}
+.hf-div{width:1px;height:40px;background:var(--g200)}
+
+/* ══════ Announcement Ticker ════════════════════════════════════ */
+.ticker{background:var(--b700);color:var(--white);padding:.55rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;animation:tick 22s linear infinite}
+.ticker-inner:hover{animation-play-state:paused}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick-item{display:inline-flex;align-items:center;gap:.4rem;padding:0 2.5rem;font-size:.8rem;font-weight:600;letter-spacing:.02em}
+.tick-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* ══════ Responsive ═════════════════════════════════════════════ */
+@media(max-width:1100px){.hero-float{display:none}}
+@media(max-width:960px){
+  .split,.split.rev{grid-template-columns:1fr;direction:ltr;gap:2rem}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .fg2{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  nav{display:none}.ham{display:flex}
+  .hd{padding:.75rem 1.2rem}
+  .ft-g{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .sec{padding:3.5rem 1.2rem}
+  .pban{padding:3rem 1.2rem 2.5rem}
+  .hero h1{font-size:2.8rem}
+}
+@media(max-width:500px){
+  .stats{grid-template-columns:1fr 1fr}
+  .hero-acts{flex-direction:column}.hero-acts .btn{justify-content:center}
+  .g2,.g3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Toast -->
+<div class="toast" id="toast">📥 Redirecting to admission form download…</div>
+
+<!-- ─── TOP BAR ──────────────────────────────────────────────── -->
+<div class="topbar">
+  <div style="display:flex;gap:1.4rem;flex-wrap:wrap">
+    <span>📞 <a href="tel:+919489663338">+91 94896 63338</a></span>
+    <span class="tb-sep">|</span>
+    <span>✉ <a href="mailto:drdasarathanintschool@gmail.com">drdasarathanintschool@gmail.com</a></span>
+    <span class="tb-sep">|</span>
+    <span>📍 Thoppampatti Pirivu, Coimbatore – 641017</span>
+  </div>
+  <div class="tb-right">
+    <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;student-login&#39;);return false">Student Login</a>
+    <span class="tb-sep">|</span>
+    <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;parent-login&#39;);return false">Parent Login</a>
+    <span class="tb-sep">|</span>
+    <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;admin-login&#39;);return false">Admin</a>
+  </div>
+</div>
+
+<!-- ─── HEADER ────────────────────────────────────────────────── -->
+<header>
+  <div class="hd">
+    <div class="logo" onclick="nav(&#39;home&#39;)">
+      <img src="index_files/logo.png">
+           <div class="logo-copy">
+        <div class="ln1">Dr. Dasarathan International School</div>
+       <!-- <div class="ln2">Inspire · Explore · Excel</div>-->
+      </div>
+    </div>
+    <nav>
+      <button class="nb cur" onclick="nav(&#39;home&#39;)">Home</button>
+      <div class="has-drop">
+        <button class="nb">About Us</button>
+        <div class="drop">
+          <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;);return false">About the School</a>
+          <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;);return false">Vision &amp; Mission</a>
+          <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;);return false">Management</a>
+          <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;);return false">Principal's Message</a>
+          <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;);return false">Testimonials</a>
+        </div>
+      </div>
+      <button class="nb" onclick="nav(&#39;campuses&#39;)">Campuses</button>
+      <button class="nb" onclick="nav(&#39;curricula&#39;)">Curricula</button>
+      <button class="nb" onclick="nav(&#39;school-level&#39;)">School Level</button>
+      <button class="nb" onclick="nav(&#39;student-life&#39;)">Student Life</button>
+      <button class="nb" onclick="nav(&#39;admissions&#39;)">Admissions</button>
+      <button class="nb" onclick="nav(&#39;contact&#39;)">Contact</button>
+      <button class="nb cta" onclick="nav(&#39;tour&#39;)">📅 Book a Tour</button>
+    </nav>
+    <button class="ham" onclick="toggleMob()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mob-nav" id="mn">
+  <button class="nb cur" onclick="nav(&#39;home&#39;);toggleMob()">🏠 Home</button>
+  <button class="nb" onclick="nav(&#39;about&#39;);toggleMob()">🏛 About Us</button>
+  <button class="nb" onclick="nav(&#39;campuses&#39;);toggleMob()">📍 Campuses</button>
+  <button class="nb" onclick="nav(&#39;curricula&#39;);toggleMob()">📚 Curricula</button>
+  <button class="nb" onclick="nav(&#39;school-level&#39;);toggleMob()">🎓 School Level</button>
+  <button class="nb" onclick="nav(&#39;student-life&#39;);toggleMob()">🌟 Student Life</button>
+  <button class="nb" onclick="nav(&#39;admissions&#39;);toggleMob()">✏️ Admissions</button>
+  <button class="nb" onclick="nav(&#39;tour&#39;);toggleMob()">📅 Book a Tour</button>
+  <button class="nb" onclick="nav(&#39;contact&#39;);toggleMob()">📞 Contact Us</button>
+  <hr>
+  <button class="nb" onclick="nav(&#39;student-login&#39;);toggleMob()">👨‍🎓 Student Login</button>
+  <button class="nb" onclick="nav(&#39;parent-login&#39;);toggleMob()">👨‍👩‍👧 Parent Login</button>
+  <button class="nb" onclick="nav(&#39;admin-login&#39;);toggleMob()">🔐 Admin Login</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HOME
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-home" class="pg on">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-body">
+      <div class="hero-badge"><span class="dot"></span>Established 2010 · Coimbatore</div>
+      <h1>Inspire.<br><em>Explore.</em><br>Excel.</h1>
+      <p class="hero-p">At Dr. Dasarathan International School, students are nurtured to be well-educated, disciplined citizens through rich, holistic education — combining research-based curricula with joyful, creative learning experiences.</p>
+      <div class="hero-acts">
+        <button class="btn btn-prime" onclick="nav(&#39;admissions&#39;)">Apply for 2025–26 ›</button>
+        <button class="btn btn-ghost" onclick="nav(&#39;tour&#39;)">Schedule a Tour</button>
+      </div>
+    </div>
+    <div class="hero-float">
+      <div><div class="hf-num">1,250</div><div class="hf-label">Students</div></div>
+      <div class="hf-div"></div>
+      <div><div class="hf-num">102</div><div class="hf-label">Teachers</div></div>
+      <div class="hf-div"></div>
+      <div><div class="hf-num">30+</div><div class="hf-label">Activities</div></div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="tick-item"><span class="tick-dot"></span>🎓 Admissions Open for 2025–2026</span>
+      <span class="tick-item"><span class="tick-dot"></span>🌟 Youth Skills Day – Recent Event</span>
+      <span class="tick-item"><span class="tick-dot"></span>🎄 Christmas Celebrations Held</span>
+      <span class="tick-item"><span class="tick-dot"></span>☀️ Summer Carnival – Grand Success</span>
+      <span class="tick-item"><span class="tick-dot"></span>📋 Class XII Biology Practice Questions Available</span>
+      <span class="tick-item"><span class="tick-dot"></span>📝 Class X Practice Question Paper Now Online</span>
+      <span class="tick-item"><span class="tick-dot"></span>🎓 Admissions Open for 2025–2026</span>
+      <span class="tick-item"><span class="tick-dot"></span>🌟 Youth Skills Day – Recent Event</span>
+      <span class="tick-item"><span class="tick-dot"></span>🎄 Christmas Celebrations Held</span>
+      <span class="tick-item"><span class="tick-dot"></span>☀️ Summer Carnival – Grand Success</span>
+      <span class="tick-item"><span class="tick-dot"></span>📋 Class XII Biology Practice Questions Available</span>
+      <span class="tick-item"><span class="tick-dot"></span>📝 Class X Practice Question Paper Now Online</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stat-bar">
+    <div class="stats">
+      <div class="stat"><div class="stat-n">1,250</div><div class="stat-l">Students Enrolled</div></div>
+      <div class="stat"><div class="stat-n">102</div><div class="stat-l">Expert Teachers</div></div>
+      <div class="stat"><div class="stat-n">1,112</div><div class="stat-l">Lessons Delivered</div></div>
+      <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Activities &amp; Clubs</div></div>
+      <div class="stat"><div class="stat-n">61</div><div class="stat-l">Classrooms</div></div>
+    </div>
+  </div>
+
+  <!-- Welcome -->
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="tag">Welcome to Dr. DIS</span>
+          <h2 class="sh">A School Built for <em>Holistic Growth</em></h2>
+          <p class="lead">Our credo at Dr DIS is <strong>Inspire … Explore … Excel.</strong> Students are nurtured to be well-educated and disciplined citizens through rich, holistic education with beautiful, sweeping facilities.</p>
+          <p style="font-size:.92rem;color:var(--g500);line-height:1.75;margin-bottom:1.8rem;">We ensure our students are engaged appropriately to tackle challenges through joyful learning. Our research-based curriculum emphasises a strong foundation in literacy, critical thinking, leadership, and bounty opportunities for creative manifestation.</p>
+          <ul class="ck" style="margin-bottom:2rem">
+            <li>Research-based curriculum with a focus on literacy &amp; critical thinking</li>
+            <li>Holistic development across academics, arts, and sports</li>
+            <li>Modern, technology-enhanced classrooms and labs</li>
+            <li>Caring, qualified teachers committed to every child's success</li>
+            <li>Students from Coimbatore, neighbouring districts, and overseas</li>
+          </ul>
+          <button class="btn btn-navy" onclick="nav(&#39;about&#39;)">Discover Our Story →</button>
+        </div>
+        <div class="split-img">
+          <img src="./index_files/photo-1503676260728-1c00da094a0b" alt="Students at Dr DIS">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School Facilities -->
+  <section class="sec" style="background:var(--g50)">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:2.8rem">
+        <span class="tag">Everyday Care</span>
+        <h2 class="sh">World-Class <em>Facilities</em></h2>
+        <p class="lead" style="margin:0 auto">Every facility at Dr. DIS is designed to make each school day safe, stimulating, and memorable for every child.</p>
+      </div>
+      <div class="grid g4" style="margin-bottom:2rem">
+        <div class="fac"><div class="fac-ico">🏫</div><h4>Vibrant Campus</h4><p>Spacious, beautifully maintained campus at Jangamanaickenpalayam, Coimbatore.</p></div>
+        <div class="fac"><div class="fac-ico">🚌</div><h4>Private School Bus</h4><p>Safe, GPS-tracked transport covering major routes across Coimbatore.</p></div>
+        <div class="fac"><div class="fac-ico">🍽️</div><h4>Modern Canteen</h4><p>Nutritionally balanced, hygienic meals prepared fresh in a modern cafeteria.</p></div>
+        <div class="fac"><div class="fac-ico">🎨</div><h4>Colourful Classes</h4><p>Bright, well-equipped classrooms designed to inspire curiosity and focus.</p></div>
+        <div class="fac"><div class="fac-ico">🔬</div><h4>Science &amp; Mind Box Lab</h4><p>Hands-on experiments with fully equipped science and innovation labs.</p></div>
+        <div class="fac"><div class="fac-ico">🏀</div><h4>Basketball Court</h4><p>Regulation outdoor basketball court for competitive training and fun.</p></div>
+        <div class="fac"><div class="fac-ico">🥋</div><h4>Karate &amp; Martial Arts</h4><p>Discipline, focus, and self-defence through certified martial arts training.</p></div>
+        <div class="fac"><div class="fac-ico">⛸️</div><h4>Skating Rink</h4><p>Dedicated skating area for beginner and intermediate learners.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem">
+        <div><span class="tag">Don't Miss</span><h2 class="sh">Our Recent <em>Events</em></h2></div>
+        <button class="btn btn-light" onclick="nav(&#39;student-life&#39;)">View All Events →</button>
+      </div>
+      <div class="grid g3">
+        <div class="ev">
+          <img class="ev-img" src="./index_files/photo-1576267423445-b2e0074d68a4" alt="Christmas celebration">
+          <div class="ev-body"><div class="ev-tag">Celebration</div><div class="ev-t">Christmas Festivities 🎄</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">Joyful Christmas celebrations bringing the Dr. DIS community together with music, performances, and holiday cheer.</p></div>
+        </div>
+        <div class="ev">
+          <img class="ev-img" src="./index_files/photo-1517486808906-6ca8b3f04846" alt="Summer Carnival">
+          <div class="ev-body"><div class="ev-tag">Annual Event</div><div class="ev-t">Summer Carnival ☀️</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">A vibrant annual carnival celebrating student talent, games, food, and the spirit of summer with families and friends.</p></div>
+        </div>
+        <div class="ev">
+          <img class="ev-img" src="./index_files/photo-1522202176988-66273c2fd55f" alt="Youth Skills Day">
+          <div class="ev-body"><div class="ev-tag">Skill Development</div><div class="ev-t">Youth Skills Day 🌟</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">Workshops, competitions, and interactive sessions helping students discover and showcase their unique talents.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="sec" style="background:var(--b50)">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <span class="tag">Community Voices</span>
+        <h2 class="sh">What Our Families Say</h2>
+      </div>
+      <div class="grid g3">
+        <div class="testi"><p class="testi-txt">Dr. DIS has completely transformed how my daughter approaches learning. She comes home excited about school every single day — the teachers here genuinely care about each child.</p><div class="testi-who"><div class="testi-av">PR</div><div><div class="testi-nm">Priya Ravikumar</div><div class="testi-rl">Parent, Grade 8</div></div></div></div>
+        <div class="testi"><p class="testi-txt">The balance between academics and activities is exceptional. My son has grown not just in knowledge but in confidence, leadership, and values — everything we hoped for.</p><div class="testi-who"><div class="testi-av">SK</div><div><div class="testi-nm">Senthil Kumar</div><div class="testi-rl">Parent, Grade 5 &amp; 10</div></div></div></div>
+        <div class="testi"><p class="testi-txt">From the modern labs to the beautiful campus and caring staff — every aspect of Dr. DIS reflects an institution that truly invests in children's futures.</p><div class="testi-who"><div class="testi-av">MV</div><div><div class="testi-nm">Meenakshi Venkataraman</div><div class="testi-rl">Parent, Grade 2</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div class="ab">
+        <div class="ab-inner" style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;flex-wrap:wrap">
+          <div>
+            <h3>Begin Your Child's Journey at Dr. DIS</h3>
+            <p>Admissions for 2025–26 are now open. Visit our campus at Jangamanaickenpalayam, Coimbatore and see the Dr. DIS difference firsthand.</p>
+          </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0">
+            <button class="btn" style="background:var(--white);color:var(--navy);font-weight:800" onclick="nav(&#39;admissions&#39;)">Apply Now</button>
+            <button class="btn" style="background:rgba(255,255,255,.14);color:var(--white);border:2px solid rgba(255,255,255,.35)" onclick="nav(&#39;tour&#39;)">Book a Tour</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ABOUT US
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-about" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>About Us</h1><p>Our story, values, and the people who make Dr. DIS extraordinary.</p><div class="bc">Home <span>›</span> About Us</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div class="split" style="margin-bottom:4rem">
+        <div class="split-img"><img src="file:///C:/Users/BMRMf/Downloads/Dr.%20Dasarathan%20International%20School%20_%20Inspire%20%C2%B7%20Explore%20%C2%B7%20Excel_files/photo-1523050854058-8df90110c9f1" alt="Dr DIS school campus"></div>
+        <div>
+          <span class="tag">Established 2010</span>
+          <h2 class="sh">About Dr. Dasarathan <em>International School</em></h2>
+          <p style="color:var(--g500);line-height:1.75;margin-bottom:1rem">Dr. Dasarathan International School was established in <strong>June 2010</strong> to provide holistic education initially to students of the catchment area surrounding Jangamanaickenpalayam and neighbouring panchayat union communities.</p>
+          <p style="color:var(--g500);line-height:1.75;margin-bottom:1.6rem">The school has since expanded at a remarkable pace, now accommodating students from all corners of Coimbatore, neighbouring districts, and even overseas — a testament to the trust families place in the Dr. DIS promise of quality education.</p>
+          <ul class="ck" style="margin-bottom:1.8rem">
+            <li>Research-based curriculum with emphasis on literacy and critical thinking</li>
+            <li>Holistic education with beautiful and sweeping facilities</li>
+            <li>Joyful learning that prepares students for real-world challenges</li>
+            <li>Creative manifestation through arts, music, and performing arts</li>
+          </ul>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+            <div style="background:var(--b50);border-radius:12px;padding:1rem;text-align:center;border:1px solid var(--b200)"><div class="stat-n">2010</div><div class="stat-l">Founded</div></div>
+            <div style="background:var(--b50);border-radius:12px;padding:1rem;text-align:center;border:1px solid var(--b200)"><div class="stat-n">1,250</div><div class="stat-l">Students</div></div>
+            <div style="background:var(--b50);border-radius:12px;padding:1rem;text-align:center;border:1px solid var(--b200)"><div class="stat-n">102</div><div class="stat-l">Teachers</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission Vision Values -->
+      <div class="grid g3" style="margin-bottom:3.5rem">
+        <div class="ab"><div class="ab-inner"><div style="font-size:2rem;margin-bottom:.8rem">🎯</div><h3>Our Mission</h3><p>To provide holistic education that nurtures well-educated, disciplined citizens who can tackle challenges through joyful learning and creative thinking.</p></div></div>
+        <div class="card" style="padding:2.5rem"><div style="font-size:2rem;margin-bottom:.8rem">👁️</div><h3 style="font-family:var(--serif);font-size:1.7rem;color:var(--navy);margin-bottom:.7rem">Our Vision</h3><p style="color:var(--g500);line-height:1.7">To be Coimbatore's most trusted institution — where every student's potential is recognised, celebrated, and developed to its fullest through inspired education.</p></div>
+        <div class="card" style="padding:2.5rem"><div style="font-size:2rem;margin-bottom:.8rem">💎</div><h3 style="font-family:var(--serif);font-size:1.7rem;color:var(--navy);margin-bottom:.7rem">Our Values</h3><ul class="ck"><li>Integrity in thought and action</li><li>Respect for every individual</li><li>Excellence without compromise</li><li>Creativity and innovation</li><li>Community and belonging</li></ul></div>
+      </div>
+      <!-- Timeline -->
+      <h3 style="font-family:var(--serif);font-size:1.9rem;color:var(--navy);margin-bottom:2rem">Our Journey</h3>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-yr">June 2010</div><div class="tl-t">Dr. Dasarathan International School Founded</div><div class="tl-d">Established to serve Jangamanaickenpalayam and surrounding panchayat union communities with holistic, quality education.</div></div>
+        <div class="tl-item"><div class="tl-yr">2013</div><div class="tl-t">Rapid Growth &amp; Expansion</div><div class="tl-d">Student enrolment surpassed 600, with new classrooms, labs, and sports facilities added to meet growing demand.</div></div>
+        <div class="tl-item"><div class="tl-yr">2016</div><div class="tl-t">Infrastructure Milestone – 61 Classrooms</div><div class="tl-d">School reaches 61 fully equipped classrooms, Mind Box Innovation Lab commissioned, basketball and skating facilities inaugurated.</div></div>
+        <div class="tl-item"><div class="tl-yr">2020</div><div class="tl-t">Digital Learning Transformation</div><div class="tl-d">Technology-integrated learning adopted school-wide, ensuring continuity of education and preparing students for a digital future.</div></div>
+        <div class="tl-item"><div class="tl-yr">2025</div><div class="tl-t">1,250+ Students — A Thriving Community</div><div class="tl-d">Today, Dr. DIS serves over 1,250 students from Coimbatore, neighbouring districts, and overseas, with 102 dedicated teachers and 30+ activities.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CAMPUSES
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-campuses" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Our Campus</h1><p>A vibrant, well-equipped learning environment in the heart of Coimbatore.</p><div class="bc">Home <span>›</span> Campuses</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div class="split" style="margin-bottom:4rem">
+        <div>
+          <span class="tag">Main Campus</span>
+          <h2 class="sh">Jangamanaickenpalayam, <em>Coimbatore</em></h2>
+          <p style="color:var(--g500);line-height:1.75;margin-bottom:1.4rem">Our single, expansive campus is situated at Jangamanaicken Palayam, Thoppampatti Pirivu, Coimbatore – 641017. Designed to provide every student with a safe, stimulating, and inspiring learning environment, the campus brings together all levels — from Early Years through Senior Secondary — under one vibrant community.</p>
+          <ul class="ck" style="margin-bottom:2rem">
+            <li>61 fully equipped, colourful classrooms</li>
+            <li>Modern Science &amp; Mind Box Innovation Lab</li>
+            <li>Basketball court &amp; outdoor play areas</li>
+            <li>Karate and skating facilities</li>
+            <li>Modern canteen with nutritious meals</li>
+            <li>GPS-tracked private school bus network</li>
+            <li>Parent-Teacher Meeting (PTM) hall</li>
+          </ul>
+          <div style="background:var(--b50);border:1px solid var(--b200);border-radius:var(--r-sm);padding:1rem 1.2rem;display:flex;align-items:flex-start;gap:.8rem">
+            <span style="font-size:1.2rem">📍</span>
+            <div>
+              <strong style="color:var(--navy);font-size:.9rem">Campus Address</strong><br>
+              <span style="font-size:.85rem;color:var(--g500)">Jangamanaicken Palayam, Thoppampatti Pirivu, Coimbatore – 641017, Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-img"><img src="./index_files/photo-1562774053-701939374585" alt="Dr DIS Campus"></div>
+      </div>
+      <!-- Facility Gallery -->
+      <h3 style="font-family:var(--serif);font-size:1.9rem;color:var(--navy);margin-bottom:2rem">Campus Facilities</h3>
+      <div class="grid g4">
+        <div class="fac"><div class="fac-ico">🔬</div><h4>Science Laboratory</h4><p>Fully equipped physics, chemistry, and biology labs for hands-on experimentation.</p></div>
+        <div class="fac"><div class="fac-ico">💡</div><h4>Mind Box Innovation Lab</h4><p>Creative technology and STEM workspace for coding, robotics, and project-based learning.</p></div>
+        <div class="fac"><div class="fac-ico">🏀</div><h4>Basketball Court</h4><p>Outdoor regulation court for practice sessions and inter-school tournaments.</p></div>
+        <div class="fac"><div class="fac-ico">⛸️</div><h4>Skating Rink</h4><p>Dedicated area for roller skating — a favourite activity among students.</p></div>
+        <div class="fac"><div class="fac-ico">🥋</div><h4>Karate Hall</h4><p>Certified martial arts instruction for discipline, fitness, and self-confidence.</p></div>
+        <div class="fac"><div class="fac-ico">🚌</div><h4>School Transport</h4><p>Safe, GPS-tracked buses operating across key routes in Coimbatore.</p></div>
+        <div class="fac"><div class="fac-ico">🍽️</div><h4>Modern Canteen</h4><p>Hygienic, nutritious meals served fresh daily in a clean, spacious canteen.</p></div>
+        <div class="fac"><div class="fac-ico">👩‍👩‍👧</div><h4>PTM Hall</h4><p>Dedicated Parent-Teacher Meeting space fostering open, regular communication.</p></div>
+      </div>
+    </div>
+  </section>
+  <!-- Map -->
+  <section class="sec" style="background:var(--g50);padding-top:0">
+    <div class="wrap">
+      <h3 style="font-family:var(--serif);font-size:1.7rem;color:var(--navy);margin-bottom:1.5rem">Find Us on the Map</h3>
+      <div class="map-frame">
+        <iframe src="./index_files/embed.html" width="100%" height="420" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dr Dasarathan International School Map">
+        </iframe>
+      </div>
+      <p style="font-size:.83rem;color:var(--g400);margin-top:.7rem;text-align:center">📍 Jangamanaicken Palayam, Thoppampatti Pirivu, Coimbatore – 641017</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CURRICULA
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-curricula" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Curricula</h1><p>A research-based academic framework built on literacy, critical thinking, and creative expression.</p><div class="bc">Home <span>›</span> Curricula</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div class="tab-bar">
+        <button class="tb-btn on" onclick="tab(&#39;cur&#39;,&#39;academic&#39;)">Academic Programme</button>
+        <button class="tb-btn" onclick="tab(&#39;cur&#39;,&#39;circulars&#39;)">Circulars</button>
+        <button class="tb-btn" onclick="tab(&#39;cur&#39;,&#39;exam&#39;)">Examination Dates</button>
+        <button class="tb-btn" onclick="tab(&#39;cur&#39;,&#39;holidays&#39;)">List of Holidays</button>
+      </div>
+      <div id="cur-academic" class="tab-pane on">
+        <div class="split">
+          <div>
+            <span class="tag">Academic Framework</span>
+            <h2 class="sh">Research-Based <em>Curriculum</em></h2>
+            <p style="color:var(--g500);line-height:1.75;margin-bottom:1.2rem">Dr. DIS follows a curriculum that places a strong emphasis on foundational literacy, numeracy, and critical thinking — equipping students to confidently engage with complex challenges in an ever-changing world.</p>
+            <p style="color:var(--g500);line-height:1.75;margin-bottom:1.4rem">The academic programme is enriched with opportunities for creative expression, scientific enquiry, and leadership development — going well beyond rote learning to cultivate genuine intellectual curiosity.</p>
+            <ul class="ck" style="margin-bottom:2rem">
+              <li>Strong literacy &amp; numeracy foundation from Early Years</li>
+              <li>Critical thinking and problem-solving integrated across all subjects</li>
+              <li>Science and Mind Box lab-based practical learning</li>
+              <li>Leadership opportunities and project-based assignments</li>
+              <li>Regular academic circulars and progress assessments</li>
+              <li>Structured examination dates communicated to parents in advance</li>
+            </ul>
+          </div>
+          <div class="split-img"><img src="./index_files/photo-1509062522246-3755977927d7" alt="Academic learning"></div>
+        </div>
+        <div class="grid g3" style="margin-top:3rem">
+          <div class="card"><div class="card-body"><div class="card-ico">📖</div><div class="card-t">Literacy &amp; Language</div><p class="card-d">Comprehensive English literacy programme with structured reading, writing, and communication skills developed from Pre-KG through Grade 12.</p></div></div>
+          <div class="card"><div class="card-body"><div class="card-ico">➕</div><div class="card-t">Mathematics</div><p class="card-d">Conceptual mathematics teaching with real-world applications, mental maths, and structured problem-solving from foundational to advanced levels.</p></div></div>
+          <div class="card"><div class="card-body"><div class="card-ico">🔬</div><div class="card-t">Science &amp; Technology</div><p class="card-d">Lab-based science education covering Physics, Chemistry, Biology, and Computer Science — practical, project-led, and inquiry-driven.</p></div></div>
+          <div class="card"><div class="card-body"><div class="card-ico">🌏</div><div class="card-t">Social Studies</div><p class="card-d">History, Geography, Civics, and Economics taught through an analytical lens, developing informed, responsible young citizens.</p></div></div>
+          <div class="card"><div class="card-body"><div class="card-ico">🎨</div><div class="card-t">Arts &amp; Creative Learning</div><p class="card-d">Visual arts, music, and craft integrated into the curriculum to develop creativity, aesthetic sensibility, and emotional intelligence.</p></div></div>
+          <div class="card"><div class="card-body"><div class="card-ico">💻</div><div class="card-t">Digital &amp; Mind Box Learning</div><p class="card-d">Technology literacy, coding foundations, and innovation projects through the Mind Box Lab — preparing students for a digital future.</p></div></div>
+        </div>
+      </div>
+      <div id="cur-circulars" class="tab-pane">
+        <div class="info-strip" style="margin-bottom:2rem"><span class="info-strip-ico">📋</span><div><h4 style="color:var(--navy);margin-bottom:.3rem">School Circulars</h4><p style="font-size:.88rem;color:var(--g500)">Academic circulars are issued regularly by the school. Parents and students are encouraged to check this section and the notice board for the latest updates.</p></div></div>
+        <div class="grid" style="grid-template-columns:1fr;gap:.8rem">
+          <div class="card" style="padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center"><div><strong style="color:var(--navy)">Class XII – Biology Practice Question Paper</strong><div style="font-size:.8rem;color:var(--g400);margin-top:.2rem">Senior Secondary · Science Stream</div></div><button class="btn btn-light" style="padding:.5rem 1rem;font-size:.82rem">Download</button></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center"><div><strong style="color:var(--navy)">Class X – Practice Question Paper</strong><div style="font-size:.8rem;color:var(--g400);margin-top:.2rem">Secondary · All Subjects</div></div><button class="btn btn-light" style="padding:.5rem 1rem;font-size:.82rem">Download</button></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center"><div><strong style="color:var(--navy)">January Circular – Academic Updates</strong><div style="font-size:.8rem;color:var(--g400);margin-top:.2rem">All Grades · January 2025</div></div><button class="btn btn-light" style="padding:.5rem 1rem;font-size:.82rem">Download</button></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center"><div><strong style="color:var(--navy)">February Circular – Examination Schedule Notice</strong><div style="font-size:.8rem;color:var(--g400);margin-top:.2rem">All Grades · February 2025</div></div><button class="btn btn-light" style="padding:.5rem 1rem;font-size:.82rem">Download</button></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center"><div><strong style="color:var(--navy)">March Circular – Term-End Procedures</strong><div style="font-size:.8rem;color:var(--g400);margin-top:.2rem">All Grades · March 2025</div></div><button class="btn btn-light" style="padding:.5rem 1rem;font-size:.82rem">Download</button></div>
+        </div>
+      </div>
+      <div id="cur-exam" class="tab-pane">
+        <div class="info-strip" style="margin-bottom:2rem"><span class="info-strip-ico">📅</span><div><h4 style="color:var(--navy);margin-bottom:.3rem">Examination Dates 2024–25</h4><p style="font-size:.88rem;color:var(--g500)">Official examination dates are communicated through school circulars. The schedule below reflects the current academic year's key assessment periods.</p></div></div>
+        <div class="grid" style="grid-template-columns:1fr;gap:.8rem">
+          <div class="card" style="padding:1.2rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:center"><div><strong style="color:var(--navy)">Unit Test – I</strong><div style="font-size:.8rem;color:var(--g400)">All Grades</div></div><div style="font-size:.88rem;color:var(--g500)">July 2025</div><span style="background:#dcfce7;color:#166534;font-size:.75rem;font-weight:700;padding:.25rem .7rem;border-radius:100px">Completed</span></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:center"><div><strong style="color:var(--navy)">Half-Yearly Examinations</strong><div style="font-size:.8rem;color:var(--g400)">All Grades</div></div><div style="font-size:.88rem;color:var(--g500)">September 2025</div><span style="background:#fef9c3;color:#854d0e;font-size:.75rem;font-weight:700;padding:.25rem .7rem;border-radius:100px">Upcoming</span></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:center"><div><strong style="color:var(--navy)">Unit Test – II</strong><div style="font-size:.8rem;color:var(--g400)">All Grades</div></div><div style="font-size:.88rem;color:var(--g500)">November 2025</div><span style="background:#fef9c3;color:#854d0e;font-size:.75rem;font-weight:700;padding:.25rem .7rem;border-radius:100px">Upcoming</span></div>
+          <div class="card" style="padding:1.2rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:center"><div><strong style="color:var(--navy)">Annual Examinations</strong><div style="font-size:.8rem;color:var(--g400)">All Grades</div></div><div style="font-size:.88rem;color:var(--g500)">February–March 2026</div><span style="background:var(--b100);color:var(--b700);font-size:.75rem;font-weight:700;padding:.25rem .7rem;border-radius:100px">Scheduled</span></div>
+        </div>
+      </div>
+      <div id="cur-holidays" class="tab-pane">
+        <div class="info-strip" style="margin-bottom:2rem"><span class="info-strip-ico">🗓️</span><div><h4 style="color:var(--navy);margin-bottom:.3rem">List of Holidays – Academic Year 2025–26</h4><p style="font-size:.88rem;color:var(--g500)">Public holidays and school vacations as approved for the current academic year. Specific dates are communicated via school circulars.</p></div></div>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.8rem">
+          <div class="ach"><div class="ach-yr">April</div><div class="ach-t">Tamil New Year (Puthandu)</div><div class="ach-d">Regional public holiday celebrated school-wide.</div></div>
+          <div class="ach"><div class="ach-yr">May</div><div class="ach-t">Summer Vacation</div><div class="ach-d">Annual summer break — dates communicated via circular.</div></div>
+          <div class="ach"><div class="ach-yr">June</div><div class="ach-t">School Re-opening</div><div class="ach-d">New academic year begins. All students to report on opening day.</div></div>
+          <div class="ach"><div class="ach-yr">August</div><div class="ach-t">Independence Day &amp; Onam</div><div class="ach-d">National holiday and cultural celebration with school programme.</div></div>
+          <div class="ach"><div class="ach-yr">October</div><div class="ach-t">Gandhi Jayanti &amp; Dussehra</div><div class="ach-d">Public holidays as per government notification.</div></div>
+          <div class="ach"><div class="ach-yr">November</div><div class="ach-t">Diwali Holidays</div><div class="ach-d">Festival break — duration as per school circular.</div></div>
+          <div class="ach"><div class="ach-yr">December–January</div><div class="ach-t">Christmas &amp; New Year Break</div><div class="ach-d">Year-end holiday — Christmas celebrations held before break.</div></div>
+          <div class="ach"><div class="ach-yr">January</div><div class="ach-t">Pongal Holidays</div><div class="ach-d">Major Tamil harvest festival — school closed for celebrations.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCHOOL LEVEL
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-school-level" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>School Level</h1><p>A purposefully structured learning journey from Early Years through Senior Secondary.</p><div class="bc">Home <span>›</span> School Level</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="display:flex;flex-direction:column;gap:2rem">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;background:var(--b50);border-radius:var(--r);padding:2rem;border:1px solid var(--b200)">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#fde68a,#f59e0b);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0">🌟</div>
+          <div><h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.4rem">Early Years (Pre-KG &amp; KG) · Ages 2.5–5</h3><p style="color:var(--g500);line-height:1.72;margin-bottom:.9rem">A joyful, play-based foundation where curiosity is celebrated every day. Our Early Years programme focuses on language development, social skills, basic numeracy, and creative exploration through age-appropriate activities designed to make every child fall in love with learning.</p><div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="ptag">Play-Based Learning</span><span class="ptag">Language Development</span><span class="ptag">Social Skills</span><span class="ptag">Creative Activities</span><span class="ptag">Numeracy Foundations</span></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;background:var(--b50);border-radius:var(--r);padding:2rem;border:1px solid var(--b200)">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--b200),var(--b500));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0">📖</div>
+          <div><h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.4rem">Primary School (Grades 1–5) · Ages 6–10</h3><p style="color:var(--g500);line-height:1.72;margin-bottom:.9rem">The primary years build strong academic foundations in English literacy, mathematics, science, and social studies. Through the research-based curriculum, students develop independent thinking, teamwork, and a genuine love for discovery — all within a nurturing, supportive classroom environment.</p><div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="ptag">Core Literacy &amp; Numeracy</span><span class="ptag">Science Exploration</span><span class="ptag">Project Learning</span><span class="ptag">Arts Integration</span></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;background:var(--b50);border-radius:var(--r);padding:2rem;border:1px solid var(--b200)">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#a7f3d0,#10b981);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0">🔭</div>
+          <div><h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.4rem">Middle School (Grades 6–8) · Ages 11–13</h3><p style="color:var(--g500);line-height:1.72;margin-bottom:.9rem">A transformative stage where students deepen subject knowledge, build analytical thinking, and discover their individual strengths. Mind Box Lab activities, leadership opportunities, and co-curricular participation are central to middle school life at Dr. DIS.</p><div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="ptag">Subject Specialisation</span><span class="ptag">Mind Box Lab</span><span class="ptag">Leadership Training</span><span class="ptag">Co-Curricular</span></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;background:var(--b50);border-radius:var(--r);padding:2rem;border:1px solid var(--b200)">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#fca5a5,#ef4444);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0">🎯</div>
+          <div><h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.4rem">Secondary School (Grades 9–10) · Ages 14–15</h3><p style="color:var(--g500);line-height:1.72;margin-bottom:.9rem">Students consolidate core academic subjects and begin subject specialisation. Structured exam preparation, career guidance discussions, and continued co-curricular involvement define the secondary school experience. Regular circulars and practice papers support academic readiness.</p><div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="ptag">Board Exam Prep</span><span class="ptag">Practice Papers</span><span class="ptag">Career Guidance</span><span class="ptag">Science Labs</span></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;background:var(--b50);border-radius:var(--r);padding:2rem;border:1px solid var(--b200)">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#ddd6fe,#7c3aed);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0">🏛️</div>
+          <div><h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:.4rem">Senior Secondary (Grades 11–12) · Ages 16–18</h3><p style="color:var(--g500);line-height:1.72;margin-bottom:.9rem">The culmination of the Dr. DIS journey. Students select streams — Science, Commerce, or Humanities — and receive intensive board examination preparation, career counselling, and mentorship to confidently transition into higher education and professional life.</p><div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="ptag">Science / Commerce / Humanities</span><span class="ptag">Board Exam Focus</span><span class="ptag">University Prep</span><span class="ptag">Practice Questions</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STUDENT LIFE
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-student-life" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Student Life</h1><p>30+ activities, vibrant events, and a community that celebrates every student's unique talent.</p><div class="bc">Home <span>›</span> Student Life</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:2.8rem">
+        <span class="tag">Co-Curricular</span>
+        <h2 class="sh">Beyond the Classroom</h2>
+        <p class="lead" style="margin:0 auto">With 30+ activities and clubs, every Dr. DIS student finds their passion, builds confidence, and creates memories that last a lifetime.</p>
+      </div>
+      <div class="tab-bar">
+        <button class="tb-btn" onclick="tab(&#39;life&#39;,&#39;sports&#39;)">Sports</button>
+        <button class="tb-btn" onclick="tab(&#39;life&#39;,&#39;arts&#39;)">Arts &amp; Culture</button>
+        <button class="tb-btn" onclick="tab(&#39;life&#39;,&#39;tech&#39;)">Technology</button>
+        <button class="tb-btn on" onclick="tab(&#39;life&#39;,&#39;events&#39;)">School Events</button>
+      </div>
+      <div id="life-sports" class="tab-pane">
+        <div class="grid g5" style="gap:1rem">
+          <div class="fac"><div class="fac-ico">🏀</div><h4>Basketball</h4><p>Regulation outdoor court with competitive training and inter-school matches.</p></div>
+          <div class="fac"><div class="fac-ico">⛸️</div><h4>Skating</h4><p>Roller skating for beginners and intermediates in a dedicated rink.</p></div>
+          <div class="fac"><div class="fac-ico">🥋</div><h4>Karate</h4><p>Certified martial arts training building discipline, fitness, and self-confidence.</p></div>
+          <div class="fac"><div class="fac-ico">⚽</div><h4>Football</h4><p>Team-based football training fostering teamwork and competitive spirit.</p></div>
+          <div class="fac"><div class="fac-ico">🏸</div><h4>Badminton</h4><p>Indoor and outdoor court practice sessions for all skill levels.</p></div>
+          <div class="fac"><div class="fac-ico">🤸</div><h4>Yoga &amp; Fitness</h4><p>Physical wellness through structured yoga, stretching, and fitness routines.</p></div>
+        </div>
+      </div>
+      <div id="life-arts" class="tab-pane">
+        <div class="grid g5" style="gap:1rem">
+          <div class="fac"><div class="fac-ico">🎵</div><h4>Music</h4><p>Vocal and instrumental music with school choir and solo performances.</p></div>
+          <div class="fac"><div class="fac-ico">💃</div><h4>Dance</h4><p>Classical, folk, and contemporary dance with stage performance opportunities.</p></div>
+          <div class="fac"><div class="fac-ico">🎭</div><h4>Drama</h4><p>Stagecraft, performance skills, and confidence through annual productions.</p></div>
+          <div class="fac"><div class="fac-ico">🎨</div><h4>Visual Arts &amp; Craft</h4><p>Drawing, painting, sculpture, and creative craft across all grade levels.</p></div>
+          <div class="fac"><div class="fac-ico">✍️</div><h4>Creative Writing</h4><p>Essay, poetry, and storytelling competitions nurturing young voices.</p></div>
+          <div class="fac"><div class="fac-ico">📸</div><h4>Photography</h4><p>Visual storytelling through digital photography and editing workshops.</p></div>
+        </div>
+      </div>
+      <div id="life-tech" class="tab-pane">
+        <div class="grid g5" style="gap:1rem">
+          <div class="fac"><div class="fac-ico">💡</div><h4>Mind Box Lab</h4><p>Innovation, STEM projects, and creative technology in our dedicated lab.</p></div>
+          <div class="fac"><div class="fac-ico">💻</div><h4>Computer &amp; Coding</h4><p>Digital literacy, coding foundations, and software skills for all levels.</p></div>
+          <div class="fac"><div class="fac-ico">🔬</div><h4>Science Society</h4><p>Research projects, science fair participation, and exploration beyond textbooks.</p></div>
+          <div class="fac"><div class="fac-ico">♟️</div><h4>Chess Club</h4><p>Strategic thinking and competitive chess training for aspiring players.</p></div>
+          <div class="fac"><div class="fac-ico">🌿</div><h4>Eco Club</h4><p>Environmental awareness, sustainability projects, and campus greening initiatives.</p></div>
+          <div class="fac"><div class="fac-ico">📖</div><h4>Reading Club</h4><p>Guided reading, book discussions, and a love of literature cultivated early.</p></div>
+        </div>
+      </div>
+      <div id="life-events" class="tab-pane on">
+        <div class="grid g3" style="gap:1.2rem">
+          <div class="ev"><img class="ev-img" src="./index_files/photo-1576267423445-b2e0074d68a4" alt="Christmas"><div class="ev-body"><div class="ev-tag">Annual Event</div><div class="ev-t">Christmas Festivities 🎄</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">Students, parents, and staff come together for music, performances, and seasonal celebrations at this beloved annual event.</p></div></div>
+          <div class="ev"><img class="ev-img" src="./index_files/photo-1517486808906-6ca8b3f04846" alt="Summer Carnival"><div class="ev-body"><div class="ev-tag">Annual Event</div><div class="ev-t">Summer Carnival ☀️</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">A vibrant end-of-year carnival with games, performances, food stalls, and family activities celebrating the Dr. DIS spirit.</p></div></div>
+          <div class="ev"><img class="ev-img" src="./index_files/photo-1522202176988-66273c2fd55f" alt="Youth Skills Day"><div class="ev-body"><div class="ev-tag">Skills Event</div><div class="ev-t">Youth Skills Day 🌟</div><p style="font-size:.82rem;color:var(--g500);margin-top:.4rem">An inspiring day of workshops, competitions, and talent showcases helping students identify and celebrate their unique abilities.</p></div></div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div style="margin-top:4rem">
+        <span class="tag gold">Hall of Excellence</span>
+        <h2 class="sh" style="margin-bottom:2rem">Student <em>Achievements</em></h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem">
+          <div class="ach"><div class="ach-yr">Academic Excellence</div><div class="ach-t">Top Board Examination Performers</div><div class="ach-d">Dr. DIS students consistently achieve distinction in Class X and Class XII board examinations, with multiple school toppers each year.</div></div>
+          <div class="ach"><div class="ach-yr">Sports</div><div class="ach-t">Inter-School Basketball Champions</div><div class="ach-d">Our basketball team clinched the district inter-school championship, reflecting the school's commitment to sports excellence.</div></div>
+          <div class="ach"><div class="ach-yr">Arts &amp; Culture</div><div class="ach-t">Best Cultural Performance Award</div><div class="ach-d">Dr. DIS won Best Cultural Performance at the district youth festival for an outstanding classical dance and music production.</div></div>
+          <div class="ach"><div class="ach-yr">Skills &amp; Innovation</div><div class="ach-t">Youth Skills Day Winners</div><div class="ach-d">Students have won regional recognition at Youth Skills competitions in technology, arts, and vocational categories.</div></div>
+          <div class="ach"><div class="ach-yr">Leadership</div><div class="ach-t">Student Council Impact Award</div><div class="ach-d">The Dr. DIS Student Council was recognised for outstanding community service and peer leadership initiatives.</div></div>
+          <div class="ach"><div class="ach-yr">Co-Curricular</div><div class="ach-t">Karate State-Level Medallists</div><div class="ach-d">Multiple students have represented Coimbatore district and returned with medals from Tamil Nadu State Karate Championships.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ADMISSIONS
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-admissions" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Admissions 2025–26</h1><p>Admissions are now open. A simple, supportive process designed with families in mind.</p><div class="bc">Home <span>›</span> Admissions</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start">
+        <div>
+          <span class="tag">How to Apply</span>
+          <h2 class="sh" style="margin-bottom:1rem">Join the Dr. DIS <em>Family</em></h2>
+          <p style="color:var(--g500);line-height:1.75;margin-bottom:2rem">We hope your campus visit will confirm that Dr. Dasarathan International School is the best fit for your child. Applications are welcome for Pre-KG through Grade 11.</p>
+          <div style="display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem">
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem;background:var(--b50);border-radius:12px;border:1px solid var(--b200)">
+              <div style="width:36px;height:36px;background:var(--b600);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:.9rem">1</div>
+              <div><strong style="color:var(--navy)">Visit Campus or Download the Form</strong><p style="font-size:.84rem;color:var(--g500);margin-top:.2rem">Visit Dr. DIS at Jangamanaickenpalayam to collect the prospectus, or download the admission form from this page.</p></div>
+            </div>
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem;background:var(--b50);border-radius:12px;border:1px solid var(--b200)">
+              <div style="width:36px;height:36px;background:var(--b600);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:.9rem">2</div>
+              <div><strong style="color:var(--navy)">Complete &amp; Submit Application</strong><p style="font-size:.84rem;color:var(--g500);margin-top:.2rem">Fill in the application form with your child's previous school records, birth certificate, and two passport photographs.</p></div>
+            </div>
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem;background:var(--b50);border-radius:12px;border:1px solid var(--b200)">
+              <div style="width:36px;height:36px;background:var(--b600);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:.9rem">3</div>
+              <div><strong style="color:var(--navy)">Interaction with Academic Team</strong><p style="font-size:.84rem;color:var(--g500);margin-top:.2rem">A warm, informal meeting with our team helps us understand your child's learning style, interests, and readiness.</p></div>
+            </div>
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem;background:var(--b50);border-radius:12px;border:1px solid var(--b200)">
+              <div style="width:36px;height:36px;background:var(--b600);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:.9rem">4</div>
+              <div><strong style="color:var(--navy)">Enrolment Confirmation</strong><p style="font-size:.84rem;color:var(--g500);margin-top:.2rem">Receive your offer and complete enrolment by submitting the signed form and registration fee. Welcome to Dr. DIS!</p></div>
+            </div>
+          </div>
+          <button class="btn btn-gold" onclick="showToast(&#39;📥 Redirecting to admission form download…&#39;)">
+            ⬇ Download Admission Form
+          </button>
+          <div style="background:#fef9c3;border:1px solid #fde68a;border-radius:12px;padding:1rem 1.2rem;margin-top:1.4rem">
+            <p style="font-size:.85rem;color:#854d0e;font-weight:600">⚠️ Admissions are open for 2025–2026. Seats are limited — apply early to secure your child's place.</p>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Online Enquiry Form</h3>
+          <div class="sub">Our admissions team will respond within 24 hours.</div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Parent / Guardian Name *</label><input type="text" class="fc" placeholder="Full name"></div>
+            <div class="fg"><label class="fl">Student Name *</label><input type="text" class="fc" placeholder="Full name"></div>
+          </div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Mobile Number *</label><input type="tel" class="fc" placeholder="+91 94896 63338"></div>
+            <div class="fg"><label class="fl">Email Address *</label><input type="email" class="fc" placeholder="email@example.com"></div>
+          </div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Grade Applying For *</label><select class="fc"><option value="">Select Grade</option><option>Pre-KG</option><option>KG</option><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option></select></div>
+            <div class="fg"><label class="fl">Child's Date of Birth</label><input type="date" class="fc"></div>
+          </div>
+          <div class="fg"><label class="fl">Current School (if applicable)</label><input type="text" class="fc" placeholder="Previous school name"></div>
+          <div class="fg"><label class="fl">How did you hear about us?</label><select class="fc"><option value="">Select</option><option>Word of mouth</option><option>Google Search</option><option>Social Media</option><option>School bus / Hoarding</option><option>Other</option></select></div>
+          <div class="fg"><label class="fl">Additional Message</label><textarea class="fc" placeholder="Any specific questions or requirements…"></textarea></div>
+          <button class="btn btn-navy" style="width:100%;justify-content:center;font-size:.96rem" onclick="showToast(&#39;Thank you! Our admissions team will contact you within 24 hours. 🎉&#39;)">Submit Enquiry →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BOOK A TOUR
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-tour" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Book a Campus Tour</h1><p>See the Dr. DIS difference firsthand — schedule a guided campus visit today.</p><div class="bc">Home <span>›</span> Book a Tour</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+        <div>
+          <span class="tag">What to Expect</span>
+          <h2 class="sh">A Tour Worth <em>Taking</em></h2>
+          <p style="color:var(--g500);line-height:1.75;margin-bottom:1.5rem">We hope your campus visit will confirm that Dr. Dasarathan International School is the best fit for your child. Our guided tours give families an authentic feel for daily life at Dr. DIS.</p>
+          <ul class="ck" style="margin-bottom:2rem">
+            <li>Meet our Principal and Admissions Coordinator</li>
+            <li>Walk through classrooms, labs, and sports facilities</li>
+            <li>Observe a live class session (on school days)</li>
+            <li>See the Mind Box Innovation Lab and Science Labs</li>
+            <li>Visit the basketball court, skating rink, and canteen</li>
+            <li>Receive the school information pack and fee details</li>
+          </ul>
+          <div class="ab" style="padding:1.8rem 2rem">
+            <div class="ab-inner">
+              <h4 style="font-size:1.1rem;color:var(--white);margin-bottom:.5rem">📅 Tour Timings</h4>
+              <p style="font-size:.88rem;color:rgba(255,255,255,.82)">Monday – Friday: 9:00 AM &amp; 2:00 PM<br>Saturday: 9:30 AM (by appointment)<br>📍 Jangamanaickenpalayam, Thoppampatti Pirivu, Coimbatore – 641017</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Reserve Your Visit</h3>
+          <div class="sub">Confirmation sent to your email within 2 hours.</div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Your Name *</label><input type="text" class="fc" placeholder="Full name"></div>
+            <div class="fg"><label class="fl">Mobile Number *</label><input type="tel" class="fc" placeholder="+91 00000 00000"></div>
+          </div>
+          <div class="fg"><label class="fl">Email Address *</label><input type="email" class="fc" placeholder="email@example.com"></div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Preferred Date *</label><input type="date" class="fc" id="td" min="2026-05-12"></div>
+            <div class="fg"><label class="fl">Preferred Time *</label><select class="fc"><option value="">Select</option><option>9:00 AM</option><option>2:00 PM</option><option>9:30 AM (Saturday)</option></select></div>
+          </div>
+          <div class="fg"><label class="fl">Grade(s) of Interest</label><input type="text" class="fc" placeholder="e.g. Grade 3, KG"></div>
+          <div class="fg"><label class="fl">Number of Visitors</label><select class="fc"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+          <div class="fg"><label class="fl">Special Requests (optional)</label><textarea class="fc" style="min-height:80px" placeholder="Accessibility needs, language preference, etc."></textarea></div>
+          <button class="btn btn-navy" style="width:100%;justify-content:center;font-size:.96rem" onclick="showToast(&#39;✅ Tour booked! A confirmation has been sent to your email.&#39;)">Confirm Tour Booking →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STUDENT LOGIN
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-student-login" class="pg">
+  <div class="login-wrap">
+    <div class="lc">
+      <div class="lc-ico">👨‍🎓</div>
+      <h2>Student Portal</h2>
+      <div class="sub">Sign in with your Student ID to access your academic resources.</div>
+      <div class="perms">
+        <h4>Student Access</h4>
+        <span class="ptag">📚 Timetable &amp; Schedule</span>
+        <span class="ptag">📝 Assignments</span>
+        <span class="ptag">📊 Grades &amp; Reports</span>
+        <span class="ptag">📅 Attendance Record</span>
+        <span class="ptag">📖 Digital Library</span>
+        <span class="ptag">📣 Announcements</span>
+        <span class="ptag">🎓 Exam Timetable</span>
+        <span class="ptag">💬 Message Teacher</span>
+        <span class="ptag">🏆 Activity Enrolment</span>
+        <span class="ptag">📋 Circulars</span>
+      </div>
+      <div class="fg"><label class="fl">Student ID *</label><input type="text" id="sid" class="fc" placeholder="e.g. DIS-2024-00123"></div>
+      <div class="fg"><label class="fl">Password *</label><input type="password" id="spw" class="fc" placeholder="Enter your password"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem">
+        <label style="display:flex;gap:.5rem;align-items:center;font-size:.83rem;cursor:pointer;color:var(--g500)"><input type="checkbox"> Remember me</label>
+        <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" style="font-size:.83rem;color:var(--b600)">Forgot Password?</a>
+      </div>
+      <button class="btn btn-navy" style="width:100%;justify-content:center" onclick="doLogin(&#39;student&#39;)">Sign In to Student Portal →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:.78rem;color:var(--g400)">Need help? Email <a href="mailto:info@dasarathanschool.com" style="color:var(--b600)">info@dasarathanschool.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PARENT LOGIN
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-parent-login" class="pg">
+  <div class="login-wrap">
+    <div class="lc">
+      <div class="lc-ico">👨‍👩‍👧</div>
+      <h2>Parent Portal</h2>
+      <div class="sub">Stay connected with your child's progress and school updates.</div>
+      <div class="perms">
+        <h4>Parent Access</h4>
+        <span class="ptag">📊 Child's Grades &amp; Reports</span>
+        <span class="ptag">📅 Attendance Summary</span>
+        <span class="ptag">💳 Fee Payments</span>
+        <span class="ptag">📣 School Notices</span>
+        <span class="ptag">💬 Message Teachers</span>
+        <span class="ptag">📅 PTM Scheduling</span>
+        <span class="ptag">🚌 Transport Updates</span>
+        <span class="ptag">📋 Circulars</span>
+      </div>
+      <div class="fg"><label class="fl">Parent ID *</label><input type="text" id="pid" class="fc" placeholder="e.g. PAR-DIS-00456"></div>
+      <div class="fg"><label class="fl">Password *</label><input type="password" id="ppw" class="fc" placeholder="Enter your password"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem">
+        <label style="display:flex;gap:.5rem;align-items:center;font-size:.83rem;cursor:pointer;color:var(--g500)"><input type="checkbox"> Remember me</label>
+        <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" style="font-size:.83rem;color:var(--b600)">Forgot Password?</a>
+      </div>
+      <button class="btn btn-navy" style="width:100%;justify-content:center" onclick="doLogin(&#39;parent&#39;)">Sign In to Parent Portal →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ADMIN LOGIN
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-admin-login" class="pg">
+  <div class="login-wrap" style="background:linear-gradient(160deg,var(--navy) 0%,var(--b900) 100%)">
+    <div class="lc" style="border-top-color:var(--gold)">
+      <div class="lc-ico" style="background:var(--navy);font-size:2rem">🔐</div>
+      <h2>Administrator Portal</h2>
+      <div class="sub">Restricted access — authorised staff only.</div>
+      <div class="perms" style="background:rgba(5,36,58,.06);border-color:var(--b200)">
+        <h4>Admin Access</h4>
+        <span class="ptag">🏫 School Management</span>
+        <span class="ptag">👩‍🏫 Staff Directory</span>
+        <span class="ptag">📊 Student Database</span>
+        <span class="ptag">📅 Academic Calendar</span>
+        <span class="ptag">💰 Finance Module</span>
+        <span class="ptag">📋 Reports &amp; Analytics</span>
+        <span class="ptag">🔔 Announcements</span>
+        <span class="ptag">🚌 Transport Module</span>
+        <span class="ptag">🔒 User Management</span>
+      </div>
+      <div class="fg"><label class="fl">Staff ID *</label><input type="text" id="aid" class="fc" placeholder="e.g. STAFF-DIS-00789"></div>
+      <div class="fg"><label class="fl">Password *</label><input type="password" id="apw" class="fc" placeholder="Enter your password"></div>
+      <div class="fg"><label class="fl">OTP / Authentication Code *</label><input type="text" id="aotp" class="fc" placeholder="6-digit code from authenticator app"></div>
+      <button class="btn btn-navy" style="width:100%;justify-content:center;background:var(--navy)" onclick="doLogin(&#39;admin&#39;)">Secure Sign In →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:.78rem;color:var(--g400)">Unauthorised access is strictly prohibited and monitored.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT US
+════════════════════════════════════════════════════════════════ -->
+<div id="pg-contact" class="pg">
+  <div class="pban"><div class="pban-inner"><h1>Contact Us</h1><p>We'd love to hear from you — reach out to our team any time.</p><div class="bc">Home <span>›</span> Contact Us</div></div></div>
+  <section class="sec" style="background:var(--white)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+        <div>
+          <span class="tag">Get in Touch</span>
+          <h2 class="sh" style="margin-bottom:1.2rem">We're Here to <em>Help</em></h2>
+          <div style="display:flex;flex-direction:column;gap:1.3rem;margin-bottom:2.5rem">
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div style="width:44px;height:44px;background:var(--b100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">📞</div>
+              <div><div style="font-weight:700;color:var(--navy);margin-bottom:.2rem">Phone</div><a href="tel:+919489663338" style="font-size:.9rem;color:var(--b600)">+91 94896 63338</a></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div style="width:44px;height:44px;background:var(--b100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">✉️</div>
+              <div>
+                <div style="font-weight:700;color:var(--navy);margin-bottom:.2rem">Email</div>
+                <a href="mailto:drdasarathanintschool@gmail.com" style="font-size:.88rem;color:var(--b600);display:block">drdasarathanintschool@gmail.com</a>
+                <a href="mailto:admissions@dasarathanschool.com" style="font-size:.88rem;color:var(--b600);display:block">admissions@dasarathanschool.com</a>
+                <a href="mailto:info@dasarathanschool.com" style="font-size:.88rem;color:var(--b600);display:block">info@dasarathanschool.com</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div style="width:44px;height:44px;background:var(--b100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">📍</div>
+              <div><div style="font-weight:700;color:var(--navy);margin-bottom:.2rem">Visit Us</div><p style="font-size:.9rem;color:var(--g500);line-height:1.6">Jangamanaicken Palayam,<br>Thoppampatti Pirivu,<br>Coimbatore – 641017, Tamil Nadu</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div style="width:44px;height:44px;background:var(--b100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">🕐</div>
+              <div><div style="font-weight:700;color:var(--navy);margin-bottom:.2rem">Office Hours</div><p style="font-size:.9rem;color:var(--g500)">Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM</p></div>
+            </div>
+          </div>
+          <!-- Social -->
+          <h4 style="font-size:.78rem;font-weight:800;color:var(--g400);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem">Follow Us</h4>
+          <div style="display:flex;gap:.7rem">
+            <a href="https://www.facebook.com/Dr.DasarathanInternationalSchool/" target="_blank" style="width:42px;height:42px;background:var(--b100);color:var(--b700);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;transition:all .3s">f</a>
+            <a href="https://www.youtube.com/@dr.dasarathaninternational9449" target="_blank" style="width:42px;height:42px;background:var(--b100);color:var(--b700);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;transition:all .3s">▶</a>
+            <a href="https://www.instagram.com/drdasarathanintschool/" target="_blank" style="width:42px;height:42px;background:var(--b100);color:var(--b700);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;transition:all .3s">📸</a>
+          </div>
+          <!-- Map -->
+          <div class="map-frame" style="margin-top:2rem">
+            <iframe src="./index_files/embed(1).html" width="100%" height="280" style="border:0;display:block" allowfullscreen="" loading="lazy" title="Dr Dasarathan International School Map"></iframe>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Send Us a Message</h3>
+          <div class="sub">We respond to all enquiries within one business day.</div>
+          <div class="fg2">
+            <div class="fg"><label class="fl">Your Name *</label><input type="text" class="fc" placeholder="Full name"></div>
+            <div class="fg"><label class="fl">Mobile *</label><input type="tel" class="fc" placeholder="+91 00000 00000"></div>
+          </div>
+          <div class="fg"><label class="fl">Email Address *</label><input type="email" class="fc" placeholder="email@example.com"></div>
+          <div class="fg"><label class="fl">Subject *</label><select class="fc"><option value="">Select topic</option><option>Admissions Enquiry</option><option>Fee Structure</option><option>Campus Tour</option><option>Academic / Curriculum</option><option>Careers at Dr. DIS</option><option>Other</option></select></div>
+          <div class="fg"><label class="fl">Message *</label><textarea class="fc" placeholder="Please describe your enquiry…"></textarea></div>
+          <button class="btn btn-navy" style="width:100%;justify-content:center;font-size:.96rem" onclick="showToast(&#39;✅ Message received! We will respond within 1 business day.&#39;)">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div style="max-width:1320px;margin:auto">
+    <div class="ft-g">
+      <div class="ft-brand">
+        <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem">
+          <div class="logo-mark" style="width:44px;height:44px;border-radius:10px;font-size:.9rem">
+            <svg viewBox="0 0 32 32" style="width:22px;height:22px;fill:var(--white)"><path d="M16 2L4 9v14l12 7 12-7V9L16 2zm0 3.2l8.4 4.9v9.8L16 24.8l-8.4-4.9V10.1L16 5.2z"></path><circle cx="16" cy="16" r="4"></circle></svg>
+          </div>
+          <div class="sn">Dr. Dasarathan International School</div>
+        </div>
+        <p>Inspire · Explore · Excel. Nurturing well-educated, disciplined citizens through holistic education since June 2010.</p>
+        <div class="socials">
+          <a class="soc" href="https://www.facebook.com/Dr.DasarathanInternationalSchool/" target="_blank">f</a>
+          <a class="soc" href="https://www.youtube.com/@dr.dasarathaninternational9449" target="_blank">▶</a>
+          <a class="soc" href="https://www.instagram.com/drdasarathanintschool/" target="_blank">📸</a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;home&#39;)">Home</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;about&#39;)">About Us</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;campuses&#39;)">Campus &amp; Facilities</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;curricula&#39;)">Curricula &amp; Academic</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;school-level&#39;)">School Level</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;student-life&#39;)">Student Life</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Admissions</h4>
+        <ul>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;admissions&#39;)">Apply for 2025–26</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;tour&#39;)">Book a Campus Tour</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;admissions&#39;)">Download Form</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;curricula&#39;)">Circulars</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;contact&#39;)">Careers</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919489663338">+91 94896 63338</a></li>
+          <li><a href="mailto:admissions@dasarathanschool.com">admissions@dasarathanschool.com</a></li>
+          <li><a href="mailto:info@dasarathanschool.com">info@dasarathanschool.com</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;student-login&#39;)">Student Login</a></li>
+          <li><a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#" onclick="nav(&#39;parent-login&#39;)">Parent Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Dr. Dasarathan International School, Coimbatore. All rights reserved.</span>
+      <div style="display:flex;gap:1.2rem">
+        <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#">Privacy Policy</a>
+        <a href="file:///C:/Users/BMRMf/Downloads/dasarathan_school_website.html#">Terms of Use</a>
+        <a href="https://www.dasarathanschool.com/" target="_blank">Live Website</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ───────────────────────────────────────────────── -->
+<script>
+/* ── Router ── */
+function nav(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('cur'));
+  const p=document.getElementById('pg-'+id);
+  if(p){p.classList.add('on');window.scrollTo({top:0,behavior:'smooth'})}
+  document.querySelectorAll('.nb').forEach(b=>{
+    const oc=b.getAttribute('onclick')||'';
+    if(oc.includes("'"+id+"'")||oc.includes('"'+id+'"'))b.classList.add('cur');
+  });
+}
+
+/* ── Mobile menu ── */
+function toggleMob(){document.getElementById('mn').classList.toggle('open')}
+document.addEventListener('click',e=>{
+  const mn=document.getElementById('mn'),hm=document.querySelector('.ham');
+  if(mn.classList.contains('open')&&!mn.contains(e.target)&&!hm.contains(e.target))mn.classList.remove('open');
+});
+
+/* ── Tabs ── */
+function tab(group,id){
+  document.querySelectorAll('[id^="'+group+'-"]').forEach(p=>p.classList.remove('on'));
+  document.getElementById(group+'-'+id).classList.add('on');
+  const bar=event.currentTarget.closest('.tab-bar');
+  if(bar)bar.querySelectorAll('.tb-btn').forEach(b=>b.classList.remove('on'));
+  event.currentTarget.classList.add('on');
+}
+
+/* ── Toast ── */
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),4500);
+}
+
+/* ── Login ── */
+function doLogin(role){
+  const ids={student:'sid',parent:'pid',admin:'aid'};
+  const pws={student:'spw',parent:'ppw',admin:'apw'};
+  const idEl=document.getElementById(ids[role]);
+  const pwEl=document.getElementById(pws[role]);
+  if(!idEl||!pwEl)return;
+  if(!idEl.value.trim()||!pwEl.value.trim()){showToast('⚠️ Please enter your ID and Password.');return;}
+  showToast('🔒 Authenticating… Redirecting to '+role.charAt(0).toUpperCase()+role.slice(1)+' Dashboard.');
+}
+
+/* ── Tour date min ── */
+(()=>{const d=document.getElementById('td');if(!d)return;const t=new Date();t.setDate(t.getDate()+1);d.min=t.toISOString().split('T')[0]})();
+</script>
+
+
+</body></html>
